@@ -1,0 +1,23 @@
+#version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb+srv://sa-portal-latest:0BNF07U4POEEjwKK@sa-portal.ut5me.mongodb.net/?retryWrites=true&w=majority&appName=SA-PORTAL
+      - DB_NAME=sa_playbook
+
+  mongo:
+    image: mongo
+    container_name: mongo_container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

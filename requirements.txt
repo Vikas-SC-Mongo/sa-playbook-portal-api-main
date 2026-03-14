@@ -1,0 +1,10 @@
+fastapi==0.110.0
+uvicorn==0.29.0
+motor>=3.4,<4.0
+pymongo>=4.5,<5.0
+python-dotenv==1.0.1
+email-validator
+pymupdf4llm
+OpenAI
+langchain_text_splitters
+python-multipart
